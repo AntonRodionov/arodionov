@@ -6,6 +6,10 @@ Class Calculate чаптер_001
 */
 
 public class Calculate {
+/**
+Main.
+@param args - args.
+*/
 	public static void main(String[] args){
 		System.out.println("Hello world");
 	}

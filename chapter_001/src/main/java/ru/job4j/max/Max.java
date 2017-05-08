@@ -1,4 +1,4 @@
-package ru.job4j.calculator;
+package ru.job4j.max;
 /**
 * Class Maximum.
 * @author arodionov
@@ -7,14 +7,14 @@ package ru.job4j.calculator;
 
 public class Max {
 /**
-*Ïîëå äëÿ õðàíåíèÿ ðåçóëüòàòà.
+*ÐŸÐ¾Ð»Ðµ Ð´Ð»Ñ Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ñ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚Ð°.
 */
 	private int result;
 /**
-*Íàõîæäåíèå áîëüøåãî ÷èñëà.
-*@param first - ïåðâîå ÷èñëî.
-*@param second - âòîðîå ÷èñëî.
-*@return - ìàêñèìàëüíîå ÷èñëî.
+*ÐÐ°Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ Ð±Ð¾Ð»ÑŒÑˆÐµÐ³Ð¾ Ñ‡Ð¸ÑÐ»Ð°.
+*@param first - Ð¿ÐµÑ€Ð²Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾.
+*@param second - Ð²Ñ‚Ð¾Ñ€Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾.
+*@return - Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾.
 */
     public int max(int first, int second) {
         this.result = first > second ? first : second;

@@ -7,46 +7,46 @@ package ru.job4j.calculator;
 
 public class Calculator {
 /**
-*Поле для хранения результата.
+*РџРѕР»Рµ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р°.
 */
 	private double result;
 /**
-*Сложение.
-*@param first - первое слагаемое.
-*@param second - второе слагаемое.
+*РЎР»РѕР¶РµРЅРёРµ.
+*@param first - РїРµСЂРІРѕРµ СЃР»Р°РіР°РµРјРѕРµ.
+*@param second - РІС‚РѕСЂРѕРµ СЃР»Р°РіР°РµРјРѕРµ.
 */
     public void add(double first, double second) {
         this.result = first + second;
     }
 
 /**
-*Вычитание.
-*@param first - уменьшаемое.
-*@param second - вычитаемое.
+*Р’С‹С‡РёС‚Р°РЅРёРµ.
+*@param first - СѓРјРµРЅСЊС€Р°РµРјРѕРµ.
+*@param second - РІС‹С‡РёС‚Р°РµРјРѕРµ.
 */
 	public void substract(double first, double second) {
         this.result = first - second;
     }
 /**
-*Деление.
-*@param first - делимое.
-*@param second - делитель.
+*Р”РµР»РµРЅРёРµ.
+*@param first - РґРµР»РёРјРѕРµ.
+*@param second - РґРµР»РёС‚РµР»СЊ.
 */
 
 	public void div(double first, double second) {
         this.result = first / second;
     }
 /**
-*Умножение.
-*@param first - первый множитель.
-*@param second - второй множитель.
+*РЈРјРЅРѕР¶РµРЅРёРµ.
+*@param first - РїРµСЂРІС‹Р№ РјРЅРѕР¶РёС‚РµР»СЊ.
+*@param second - РІС‚РѕСЂРѕР№ РјРЅРѕР¶РёС‚РµР»СЊ.
 */
 	public void multiple(double first, double second) {
         this.result = first * second;
     }
 /**
-*Возвращение результата.
-*@return - результат.
+*Р’РѕР·РІСЂР°С‰РµРЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚Р°.
+*@return - СЂРµР·СѓР»СЊС‚Р°С‚.
 */
     public double getResult() {
         return this.result;

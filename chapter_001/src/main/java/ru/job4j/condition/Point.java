@@ -44,6 +44,6 @@ public class Point {
 *@return - координата по Y.
 */
     public boolean is(int a, int b) {
-		return this.getY() == a * this.getX() + b;
+		return this.y == a * this.x + b;
 	}
 }

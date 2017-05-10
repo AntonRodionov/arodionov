@@ -1,8 +1,8 @@
 /**
-* Package for LoopTest task.
+* Package for TurnTest task.
 *
 * @author Anton Rodionov
 * @version $Id$
 * @since 0.1
 */
-package ru.job4j.loop;
+package ru.job4j.array;

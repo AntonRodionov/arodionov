@@ -1,5 +1,5 @@
 /**
-* Package for Counter task.
+* Package for Loop task.
 *
 * @author Anton Rodionov
 * @version $Id$

@@ -12,33 +12,23 @@ import static org.junit.Assert.assertThat;
 */
 public class MaxTest {
 /**
-* Test первое число больше.
+* Test все числа различны.
 */
 	@Test
     public void firstNumberIsBigger() {
         Max sravn = new Max();
-        int result = sravn.max(5, 2);
-        int expected = 5;
+        int result = sravn.max(5, 2, 7);
+        int expected = 7;
         assertThat(result, is(expected));
     }
 /**
-* Test второе число больше.
-*/
-	@Test
-    public void secondNumberIsBigger() {
-        Max sravn = new Max();
-        int result = sravn.max(2, 5);
-        int expected = 5;
-        assertThat(result, is(expected));
-    }
-/**
-* Test числа равны.
+* Test 2 числа равны.
 */
 	@Test
     public void numbersAreEqual() {
         Max sravn = new Max();
-        int result = sravn.max(5, 5);
-        int expected = 5;
+        int result = sravn.max(5, 5, 9);
+        int expected = 9;
         assertThat(result, is(expected));
     }
 

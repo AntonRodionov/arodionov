@@ -6,6 +6,14 @@ package ru.job4j.mytracker;
  * @since 16.05.2017
  */
 public class Tracker{
+    public Item[] getItems() {
+        return items;
+    }
+
+    public void setItems(Item[] items) {
+        this.items = items;
+    }
+
     private Item[] items = new Item[100];
 /**
  *добавляет заявку, переданную в аргументах в массив заявок this.items.
@@ -41,7 +49,7 @@ public class Tracker{
         for (int i = 0; i < 100; i++) {
             if (this.items[i].getId() == item.getId()){
                 System.arraycopy(this.items, i + 1, this.items, i, 100 - i - 1);
-
+                break;
             }
         }
     }
@@ -65,7 +73,7 @@ public class Tracker{
         return copyArray;
     }
 /**
- * добавляет заявку, переданную в аргументах в массив заявок this.items.
+ * ищет заявку, переданную в аргументах в массиве заявок this.items.
  * проверяет в цикле все элементы массива this.items, сравнивая name
  * (используя метод getName класса Item) с аргументом метода String key.
  * Элементы, у которых совпадает name, копирует в результирующий массив и возвращает его;
@@ -76,6 +84,7 @@ public class Tracker{
         int j = 0;
         int k = 0;
         for (int i = 0; i < 100; i++) {
+            if (this.items[i] == null){break;}
             if (this.items[i].getName() == key){j++;}
         }
         Item[] copyArray = new Item[j];
@@ -97,6 +106,7 @@ public class Tracker{
         Item itm;
         itm = null;
         for (int i = 0; i < 100; i++) {
+            if (this.items[i] == null){break;}
             if (this.items[i].getId() == id){
                 itm = this.items[i];
                 break;

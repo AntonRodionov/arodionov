@@ -10,6 +10,26 @@ public class Item {
     private long created;
     private String[] comments;
 
+    public Item() {
+    }
+
+    public Item(String id) {
+        this.id = id;
+    }
+
+    public Item(String id, String name, String desc, long created, String[] comments) {
+        this.id = id;
+        this.name = name;
+        this.desc = desc;
+        this.created = created;
+        this.comments = comments;
+    }
+
+    public Item(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public String getId() {
         return id;
     }

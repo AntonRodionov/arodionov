@@ -53,11 +53,11 @@ public class TrackerTest {
         Item item3 = new Item("test3_ID","test3Name");
         Item item4 = new Item("test4_ID","test4Name");
         Item item5 = new Item("test5_ID","test5Name");
-        tracker.add(item5);
-        tracker.add(item4);
-        tracker.add(item3);
-        tracker.add(item2);
         tracker.add(item1);
+        tracker.add(item2);
+        tracker.add(item3);
+        tracker.add(item4);
+        tracker.add(item5);
         Item deleteItem = new Item("test3_ID");
         Item nullItem = null;
         tracker.delete(deleteItem);
@@ -76,11 +76,11 @@ public class TrackerTest {
         Item item3 = new Item("test3_ID","test3Name");
         Item item4 = new Item("test4_ID","test4Name");
         Item item5 = new Item("test5_ID","test5Name");
-        tracker.add(item5);
-        tracker.add(item4);
-        tracker.add(item3);
-        tracker.add(item2);
         tracker.add(item1);
+        tracker.add(item2);
+        tracker.add(item3);
+        tracker.add(item4);
+        tracker.add(item5);
         Item[] resTracker = new Item[5];
         resTracker[0] = item1;
         resTracker[1] = item2;
@@ -101,11 +101,11 @@ public class TrackerTest {
         Item item3 = new Item("test3_ID","test3Name");
         Item item4 = new Item("test4_ID","test3Name");
         Item item5 = new Item("test5_ID","test5Name");
-        tracker.add(item5);
-        tracker.add(item4);
-        tracker.add(item3);
-        tracker.add(item2);
         tracker.add(item1);
+        tracker.add(item2);
+        tracker.add(item3);
+        tracker.add(item4);
+        tracker.add(item5);
         Item[] resTracker = new Item[2];
         resTracker[0] = item3;
         resTracker[1] = item4;
@@ -122,11 +122,11 @@ public class TrackerTest {
         Item item3 = new Item("test3_ID","test3Name");
         Item item4 = new Item("test4_ID","test4Name");
         Item item5 = new Item("test5_ID","test5Name");
-        tracker.add(item5);
-        tracker.add(item4);
-        tracker.add(item3);
-        tracker.add(item2);
         tracker.add(item1);
+        tracker.add(item2);
+        tracker.add(item3);
+        tracker.add(item4);
+        tracker.add(item5);
         assertThat(tracker.findById("test2_ID"), is(item2));
     }
     /**
@@ -140,11 +140,11 @@ public class TrackerTest {
         Item item3 = new Item("test3_ID","test3Name");
         Item item4 = new Item("test4_ID","test4Name");
         Item item5 = new Item("test5_ID","test5Name");
-        tracker.add(item5);
-        tracker.add(item4);
-        tracker.add(item3);
-        tracker.add(item2);
         tracker.add(item1);
+        tracker.add(item2);
+        tracker.add(item3);
+        tracker.add(item4);
+        tracker.add(item5);
         assertThat(tracker.findById("test6_ID"), is(nullValue()));
     }
 }

@@ -6,6 +6,9 @@ package ru.job4j.mytracker;
  * @since 16.05.2017
  */
 public class Tracker{
+    private Item[] items = new Item[100];
+    private int pos = 0;
+
     public Item[] getItems() {
         return items;
     }
@@ -14,15 +17,15 @@ public class Tracker{
         this.items = items;
     }
 
-    private Item[] items = new Item[100];
+
 /**
  *добавляет заявку, переданную в аргументах в массив заявок this.items.
  *@param item - заявка.
  *@return - возвращает заявку добавленную в трэкер.
  */
     public Item add(Item item){
-        System.arraycopy(this.items, 0, this.items, 1, 99);
-        this.items[0] = item;
+        //System.arraycopy(this.items, 0, this.items, 1, 99);
+        this.items[pos++] = item;
         return item;
     }
 /**
@@ -49,6 +52,7 @@ public class Tracker{
         for (int i = 0; i < 100; i++) {
             if (this.items[i].getId() == item.getId()){
                 System.arraycopy(this.items, i + 1, this.items, i, 100 - i - 1);
+                pos--;
                 break;
             }
         }

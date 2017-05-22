@@ -36,6 +36,8 @@ public class Tracker{
  */
     public void update(Item item){
         for (int i = 0; i < 100; i++) {
+            System.out.println(this.items[i].getId());
+            System.out.println(item.getId());
             if (this.items[i].getId() == item.getId()){
                 this.items[i] = item;
                 break;

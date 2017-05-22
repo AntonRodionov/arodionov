@@ -28,12 +28,12 @@ public class TrackerTest {
     @Test
     public void whenUpdateItemById() {
         Tracker tracker = new Tracker();
-        Item item1 = new Item("test1_ID","test1Name");
-        Item item2 = new Item("test2_ID","test2Name");
-        Item item3 = new Item("test3_ID","test3Name");
-        Item item4 = new Item("test4_ID","test4Name");
-        Item item5 = new Item("test5_ID","test5Name");
-        Item correctItem = new Item("test3_ID","testUpdateName");
+        Item item1 = new Item("1","test1Name", "test1description");
+        Item item2 = new Item("2","test2Name", "test2description");
+        Item item3 = new Item("3","test3Name", "test3description");
+        Item item4 = new Item("4","test4Name", "test4description");
+        Item item5 = new Item("5","test5Name", "test5description");
+        Item correctItem = new Item("3","testUpdateName", "testUpdateDescription");
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);

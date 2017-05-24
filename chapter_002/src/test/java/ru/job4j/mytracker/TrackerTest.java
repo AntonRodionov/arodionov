@@ -48,17 +48,17 @@ public class TrackerTest {
     @Test
     public void whenDeleteItemById() {
         Tracker tracker = new Tracker();
-        Item item1 = new Item("test1_ID","test1Name");
-        Item item2 = new Item("test2_ID","test2Name");
-        Item item3 = new Item("test3_ID","test3Name");
-        Item item4 = new Item("test4_ID","test4Name");
-        Item item5 = new Item("test5_ID","test5Name");
+        Item item1 = new Item("1","test1Name");
+        Item item2 = new Item("2","test2Name");
+        Item item3 = new Item("3","test3Name");
+        Item item4 = new Item("4","test4Name");
+        Item item5 = new Item("5","test5Name");
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);
         tracker.add(item4);
         tracker.add(item5);
-        Item deleteItem = new Item("test3_ID");
+        Item deleteItem = new Item("3");
         Item nullItem = null;
         tracker.delete(deleteItem);
         assertThat(tracker.getItems()[2], is(item4));
@@ -71,11 +71,11 @@ public class TrackerTest {
     @Test
     public void whenReturnArrayWithoutNull() {
         Tracker tracker = new Tracker();
-        Item item1 = new Item("test1_ID","test1Name");
-        Item item2 = new Item("test2_ID","test2Name");
-        Item item3 = new Item("test3_ID","test3Name");
-        Item item4 = new Item("test4_ID","test4Name");
-        Item item5 = new Item("test5_ID","test5Name");
+        Item item1 = new Item("1","test1Name");
+        Item item2 = new Item("2","test2Name");
+        Item item3 = new Item("3","test3Name");
+        Item item4 = new Item("4","test4Name");
+        Item item5 = new Item("5","test5Name");
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);
@@ -96,11 +96,11 @@ public class TrackerTest {
     @Test
     public void whenFindItemsByName() {
         Tracker tracker = new Tracker();
-        Item item1 = new Item("test1_ID","test1Name");
-        Item item2 = new Item("test2_ID","test2Name");
-        Item item3 = new Item("test3_ID","test3Name");
-        Item item4 = new Item("test4_ID","test3Name");
-        Item item5 = new Item("test5_ID","test5Name");
+        Item item1 = new Item("1","test1Name");
+        Item item2 = new Item("2","test2Name");
+        Item item3 = new Item("3","test3Name");
+        Item item4 = new Item("4","test3Name");
+        Item item5 = new Item("5","test5Name");
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);
@@ -117,17 +117,17 @@ public class TrackerTest {
     @Test
     public void whenFindItemsById() {
         Tracker tracker = new Tracker();
-        Item item1 = new Item("test1_ID","test1Name");
-        Item item2 = new Item("test2_ID","test2Name");
-        Item item3 = new Item("test3_ID","test3Name");
-        Item item4 = new Item("test4_ID","test4Name");
-        Item item5 = new Item("test5_ID","test5Name");
+        Item item1 = new Item("1","test1Name");
+        Item item2 = new Item("2","test2Name");
+        Item item3 = new Item("3","test3Name");
+        Item item4 = new Item("4","test4Name");
+        Item item5 = new Item("5","test5Name");
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);
         tracker.add(item4);
         tracker.add(item5);
-        assertThat(tracker.findById("test2_ID"), is(item2));
+        assertThat(tracker.findById("2"), is(item2));
     }
     /**
      * Тест поиска НЕсуществующего элемента массива по уникальному полю Id
@@ -135,16 +135,16 @@ public class TrackerTest {
     @Test
     public void whenFindItemsByIdNotExist() {
         Tracker tracker = new Tracker();
-        Item item1 = new Item("test1_ID","test1Name");
-        Item item2 = new Item("test2_ID","test2Name");
-        Item item3 = new Item("test3_ID","test3Name");
-        Item item4 = new Item("test4_ID","test4Name");
-        Item item5 = new Item("test5_ID","test5Name");
+        Item item1 = new Item("1","test1Name");
+        Item item2 = new Item("2","test2Name");
+        Item item3 = new Item("3","test3Name");
+        Item item4 = new Item("4","test4Name");
+        Item item5 = new Item("5","test5Name");
         tracker.add(item1);
         tracker.add(item2);
         tracker.add(item3);
         tracker.add(item4);
         tracker.add(item5);
-        assertThat(tracker.findById("test6_ID"), is(nullValue()));
+        assertThat(tracker.findById("6"), is(nullValue()));
     }
 }

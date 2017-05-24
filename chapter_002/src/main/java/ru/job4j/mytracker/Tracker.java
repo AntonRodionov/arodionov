@@ -8,11 +8,9 @@ package ru.job4j.mytracker;
 public class Tracker{
     private Item[] items = new Item[100];
     private int pos = 0;
-
     public Item[] getItems() {
         return items;
     }
-
     public void setItems(Item[] items) {
         this.items = items;
     }
@@ -24,7 +22,6 @@ public class Tracker{
  *@return - возвращает заявку добавленную в трэкер.
  */
     public Item add(Item item){
-        //System.arraycopy(this.items, 0, this.items, 1, 99);
         this.items[pos++] = item;
         return item;
     }
@@ -36,9 +33,6 @@ public class Tracker{
  */
     public void update(Item item){
         for (int i = 0; i < 100; i++) {
-            System.out.println("i=" + i);
-            System.out.println(this.items[i].getId());
-            System.out.println(item.getId());
             if (Integer.parseInt(this.items[i].getId()) == Integer.parseInt(item.getId())){
                 this.items[i] = item;
                 break;
@@ -92,11 +86,11 @@ public class Tracker{
         int k = 0;
         for (int i = 0; i < 100; i++) {
             if (this.items[i] == null){break;}
-            if (this.items[i].getName() == key){j++;}
+            if (this.items[i].getName().equals(key)){j++;}
         }
         Item[] copyArray = new Item[j];
         for (int l = 0; l < 100; l++) {
-            if (this.items[l].getName() == key){
+            if (this.items[l].getName().equals(key)){
                 copyArray[k] = this.items[l];
                 k++;}
             if (k == j){break;}

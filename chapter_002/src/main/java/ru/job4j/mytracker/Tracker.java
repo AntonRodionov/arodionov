@@ -36,9 +36,10 @@ public class Tracker{
  */
     public void update(Item item){
         for (int i = 0; i < 100; i++) {
+            System.out.println("i=" + i);
             System.out.println(this.items[i].getId());
             System.out.println(item.getId());
-            if (this.items[i].getId() == item.getId()){
+            if (Integer.parseInt(this.items[i].getId()) == Integer.parseInt(item.getId())){
                 this.items[i] = item;
                 break;
             }
@@ -52,7 +53,7 @@ public class Tracker{
  */
     public void delete(Item item){
         for (int i = 0; i < 100; i++) {
-            if (this.items[i].getId() == item.getId()){
+            if (Integer.parseInt(this.items[i].getId()) == Integer.parseInt(item.getId())){
                 System.arraycopy(this.items, i + 1, this.items, i, 100 - i - 1);
                 pos--;
                 break;
@@ -113,7 +114,7 @@ public class Tracker{
         itm = null;
         for (int i = 0; i < 100; i++) {
             if (this.items[i] == null){break;}
-            if (this.items[i].getId() == id){
+            if (Integer.parseInt(this.items[i].getId()) == Integer.parseInt(id)){
                 itm = this.items[i];
                 break;
             }

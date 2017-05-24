@@ -43,7 +43,7 @@ public class TrackerTest {
         assertThat(tracker.getItems()[2], is(correctItem));
     }
     /**
-     * Тест удвления элемента по Id со сдвигом массива влево
+     * Тест удаления элемента по Id со сдвигом массива влево
      */
     @Test
     public void whenDeleteItemById() {

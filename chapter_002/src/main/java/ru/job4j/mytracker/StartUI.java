@@ -36,37 +36,37 @@ public class StartUI {
         Tracker tracker = new Tracker();
         Input input = new ConsoleInput();
         String request = input.ask("choose menu options:");
-        while (request != "6") {
-            switch (request){
-                case "0":
+        while (Integer.parseInt(request) != 6) {
+            switch (Integer.parseInt(request)){
+                case 0:
                     String name0 = input.ask("Enter name:");
                     String desc0 = input.ask("Enter description");
                     Item item0 = new Item (Integer.toString(id), name0, desc0);
                     tracker.add(item0);
                     id++;
                     break;
-                case "1":
+                case 1:
                     for (Item  item2 : tracker.findAll()) {
                         System.out.println("id:" + item2.getId() + "   name: " + item2.getName() + "   description: " + item2.getDesc());
                     }
                     break;
-                case "2":
+                case 2:
                     String id2 = input.ask("Enter task id:");
                     String name2 = input.ask("Enter new name:");
                     String desc2 = input.ask("Enter new description:");
                     Item item2 = new Item (id2, name2, desc2);
                     tracker.update(item2);
                     break;
-                case "3":
+                case 3:
                     String id3 = input.ask("Enter task id:");
                     Item item3 = new Item(id3);
                     tracker.delete(item3);
                     break;
-                case "4":
+                case 4:
                     String id4 = input.ask("Enter task id:");
                     System.out.println("id:" + tracker.findById(id4).getId() + "   name: " + tracker.findById(id4).getName() + "   description: " + tracker.findById(id4).getDesc());
                     break;
-                case "5":
+                case 5:
                     String name5 = input.ask("Enter task name:");
                     for (Item  item5 : tracker.findByName(name5)) {
                         if (item5 != null) {

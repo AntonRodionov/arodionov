@@ -34,7 +34,7 @@ public class Tracker{
  * @param item - заявка.
  */
     public void update(Item item){
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < this.items.length; i++) {
             if (Integer.parseInt(this.items[i].getId()) == Integer.parseInt(item.getId())){
                 this.items[i] = item;
                 break;
@@ -48,9 +48,9 @@ public class Tracker{
  * @param item - заявка.
  */
     public void delete(Item item){
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < pos; i++) {
             if (Integer.parseInt(this.items[i].getId()) == Integer.parseInt(item.getId())){
-                System.arraycopy(this.items, i + 1, this.items, i, 100 - i - 1);
+                System.arraycopy(this.items, i + 1, this.items, i, this.items.length - i - 1);
                 pos--;
                 break;
             }
@@ -110,7 +110,7 @@ public class Tracker{
     public Item findById(String id) {
         Item itm;
         itm = null;
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < pos; i++) {
             if (this.items[i] == null){break;}
             if (Integer.parseInt(this.items[i].getId()) == Integer.parseInt(id)){
                 itm = this.items[i];

@@ -1,5 +1,7 @@
 package ru.job4j.mytracker;
 
+import java.util.Arrays;
+
 /**
  * Class Tracker.
  * @author arodionov
@@ -59,18 +61,19 @@ public class Tracker{
  * @return - возвращает массив заявок.
  */
     public Item[] findAll(){
-        int j = 0;
-        int k = 0;
-        for (int i = 0; i < 100; i++) {
-            if (this.items[i] != null){j++;}
-        }
-        Item[] copyArray = new Item[j];
-        for (int l = 0; l < 100; l++) {
+        //int j = 0;
+        //int k = 0;
+        //for (int i = 0; i < 100; i++) {
+        //    if (this.items[i] != null){j++;}
+        //}
+        Item[] copyArray = new Item[pos];
+        /*for (int l = 0; l < 100; l++) {
             if (this.items[l] != null){
                 copyArray[k] = this.items[l];
                 k++;
             }
-        }
+        }*/
+        System.arraycopy(this.items, 0, copyArray, 0, pos);
         return copyArray;
     }
 /**
@@ -82,20 +85,21 @@ public class Tracker{
  *@return - возвращает перечень заявок с искомым именем.
  */
     public Item[] findByName(String key){
-        int j = 0;
+        //int j = 0;
         int k = 0;
-        for (int i = 0; i < 100; i++) {
+        /*for (int i = 0; i < 100; i++) {
             if (this.items[i] == null){break;}
             if (this.items[i].getName().equals(key)){j++;}
-        }
-        Item[] copyArray = new Item[j];
-        for (int l = 0; l < 100; l++) {
+        }*/
+        Item[] copyArray = new Item[pos];
+        for (int l = 0; l < pos; l++) {
             if (this.items[l].getName().equals(key)){
                 copyArray[k] = this.items[l];
                 k++;}
-            if (k == j){break;}
+                //j++;}
+            //if (k == j){break;}
         }
-        return copyArray;
+        return Arrays.copyOf(copyArray, k);
         }
 /**
  * проверяет в цикле все элементы массива this.items, сравнивая id с аргументом String id и возвращает найденный Item.
